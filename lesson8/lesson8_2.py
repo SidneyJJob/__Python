@@ -12,6 +12,9 @@ with gr.Blocks() as demo:
     
     @greet_button.click(
         inputs=[name_textbox],
-        outputs=[output_textbox])
+        outputs=[output_textbox]
+    )
+    def greet(name):
+        return name + "，你好！"
 
     demo.launch()
